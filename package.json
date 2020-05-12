@@ -1,0 +1,21 @@
+{
+  "name": "rbooking",
+  "version": "1.0.0",
+  "description": "aplikasi untuk booking ruangan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "createDB": "node app/migration/create_db.js",
+    "dropDB": "node app/migration/drop_db.js"
+  },
+  "author": "a-gan",
+  "license": "GNU/GPL",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.1",
+    "formidable": "^1.2.2",
+    "mv": "^2.1.1",
+    "mysql": "^2.18.1"
+  }
+}
