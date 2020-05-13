@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "createDB": "node app/migration/create_db.js",
-    "dropDB": "node app/migration/drop_db.js"
+    "create-db": "node app/migration/create_db.js",
+    "drop-db": "node app/migration/drop_db.js",
+    "create-table": "node app/migration/create_table.js"
   },
   "author": "a-gan",
   "license": "GNU/GPL",
