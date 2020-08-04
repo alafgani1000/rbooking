@@ -2,14 +2,16 @@
 
 var express = require('express');
 var app = express();
+const path = require('path');
+const router = express.Router();
 var logger = require('morgan');
 
 app.use(logger('dev'));
 
-app.use(express.static(__dirname+'/publik'));
+app.use(express.static("public"));
 
 app.get('/', (req, res) => {
-    res.send('Hello world');
+    res.sendFile(path.join(__dirname+'/view/index.html'));
 });
 
 app.get('/profil', (req, res) => {

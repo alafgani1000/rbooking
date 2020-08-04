@@ -26,6 +26,18 @@ db.connect((err) => {
         PRIMARY KEY(id)
     )`;
 
+    let roombooking  = `CREATE TABLE room_booking
+    (
+        id INT NOT NULL AUTO_INCREMENT,
+        room_id INT NOT NULL,
+        booking_by INT NOT NULL,
+        start_booking DATETIME,
+        end_booking DATETIME,
+        created_at DATETIME,
+        update_at DATETIME,
+        PRIMARY KEY(id)
+    )`;
+
     let roomhistorysql = `CREATE TABLE room_history
     (
         id INT NOT NULL AUTO_INCREMENT,
@@ -37,6 +49,11 @@ db.connect((err) => {
         updated_at DATETIME,
         PRIMARY KEY(id)
     )`;
+
+    db.query(roombooking, (err, result) => {
+        if(err) throw err;
+        console.log('table room booking created');
+    });
 
     db.query(usersql, (err, result) => {
         if(err) throw err;
